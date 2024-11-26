@@ -1,0 +1,82 @@
+_PRINTF(3)            Library Functions            _PRINTF(3)
+
+NAME
+       _printf - Implementation of a custom printf function that
+       supports various format specifiers.
+
+SYNOPSIS
+       #include "main.h"
+
+       int _printf(const char *format, ...);
+
+DESCRIPTION
+       The `_printf` function is a custom implementation of the
+       standard `printf` function, designed to handle a limited set
+       of format specifiers. It outputs formatted text to the
+       standard output (stdout), and handles the following format specifiers:
+
+       - %c : Prints a single character.
+       - %s : Prints a string of characters.
+       - %%  : Prints a literal '%' character.
+       - %d : Prints a signed decimal integer.
+       - %i : Prints a signed decimal integer (same as %d).
+
+       The function works by parsing the `format` string and replacing
+       format specifiers with the corresponding arguments. It supports
+       multiple arguments of various types as defined by the format specifiers.
+
+       The function also counts the number of characters printed and
+       returns this count as an integer.
+
+       The syntax for calling `_printf` is:
+
+             int _printf(const char *format, ...);
+
+       Where:
+           - `format` is a string containing the text to be printed
+             with format specifiers.
+           - The ellipsis (`...`) represents the variable arguments
+             corresponding to the format specifiers.
+
+       The function prints the formatted output to the standard output
+       and returns the total number of characters printed, including
+       both regular characters and those specified by the format specifiers.
+
+RETURN VALUE
+       The `_printf` function returns the total number of characters
+       printed (excluding the null byte used to end the string).
+       It is important to note that the return value includes all
+       characters, including regular characters in the format string
+       and characters printed by the format specifiers.
+
+       On failure (e.g., invalid format specifiers), the function will
+       still return a valid count, but may not print the intended output.
+
+EXAMPLES
+       The following example demonstrates the use of the `_printf` function:
+
+       #include "main.h"
+       #include <stdio.h>
+
+       int main()
+       {
+           _printf("Hello %s, char: %c, percent: %%\n", "world", 'A');
+           _printf("Integer: %d, and %i\n", 123, -456);
+           return 0;
+       }
+
+       Output:
+       Hello world, char: A, percent: %
+       Integer: 123, and -456
+
+
+BUGS
+       The function does not currently support floating point specifiers
+       such as `%f`, `%e`, etc.
+
+       Error handling is minimal, and invalid format specifiers
+       will be ignored without printing any message or triggering
+       an error.
+
+AUTHOR
+       Written by [Bryan Weinegaessel, Hugo Bailly].
