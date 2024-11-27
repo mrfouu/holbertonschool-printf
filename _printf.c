@@ -6,7 +6,7 @@
  * Return: The number of characters printed
  */
 
-int _printf(const char format, ...)
+int _printf(const char *format, ...)
 {
 	int counter = 0;
 	va_list args;
@@ -17,9 +17,9 @@ int _printf(const char format, ...)
 		if (*format == '%' && *(++format))
 		{
 			counter += (*format == 'c') ? print_char(va_arg(args, int))
-				: (*format == 's') ? print_string(va_arg(args, char))
+				: (*format == 's') ? print_string(va_arg(args, const char *))
 				: (*format == '%') ? (_putchar('%'), 1)
-				: (*format == 'd' || *format == 'i') ?(print_int(va_arg(args, int)),1)
+				: (*format == 'd' || *format == 'i') ? (print_int(va_arg(args, int)), 1)
 				: 0;
 		}
 		else

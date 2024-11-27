@@ -6,8 +6,8 @@
 
 void print_int(int num);
 void _putchar(char c);
-int print_string(const char str);
+int print_string(const char *str);
 int print_char(int ch);
-int _printf(const charformat, ...)
+int _printf(const char *format, ...);
 
 #endif
