@@ -2,13 +2,6 @@
 #define MAIN_FILE
 #include <stdarg.h>
 
-<<<<<<< HEAD
-void print_int(int num);
-void _putchar(char c);
-int print_string(const char *str);
-int print_char(int ch);
-int _printf(const char *format, ...);
-=======
 int _printf(const char *format, ...);
 int print_char(va_list list);
 int print_string(va_list list);
@@ -28,7 +21,4 @@ typedef struct specifier
 	int (*function)(va_list argument);
 
 } spec;
-
->>>>>>> bryan
-
 #endif
