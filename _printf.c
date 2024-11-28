@@ -23,19 +23,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-<<<<<<< HEAD
-			counter += (*format == 'c') ? print_char(va_arg(args, int))
-				: (*format == 's') ? print_string(va_arg(args, const char *))
-				: (*format == '%') ? (_putchar('%'), 1)
-				: (*format == 'd' || *format == 'i') ? (print_int(va_arg(args, int)), 1)
-				: 0;
-		}
-		else
-		{
-			_putchar(*format);
-=======
-			_putchar(format[i]);
->>>>>>> bryan
 			counter++;
 		}
 
