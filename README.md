@@ -1,3 +1,4 @@
+```
 graph TD
     A[Démarrer printf] --> B[Parcourir format]
     B --> C{Est-ce un caractère `%` ?}
@@ -20,3 +21,4 @@ graph TD
     M --> N{Est-ce la fin du format ?}
     N -->|Oui| O[Afficher résultat final]
     N -->|Non| B
+```
