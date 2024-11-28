@@ -1,7 +1,7 @@
 ```mermaid
 graph TD
     A[Démarrer printf] --> B[Parcourir format]
-    B --> C{Est-ce un caractère `%` ?}
+    B --> C{Est-ce un caractère % ?}
     C -->|Oui| D[Identifier spécificateur et récupérer argument]
     C -->|Non| E[Ajouter caractère au résultat final]
     D --> F{Spécificateur de format ?}
@@ -9,8 +9,8 @@ graph TD
     F -->|%s| H[Ajouter chaîne]
     F -->|%c| I[Ajouter caractère]
     F -->|%f| J[Convertir flottant en chaîne et ajouter]
-    F -->|%%| K[Ajouter `%`]
-    F -->|autre| L[Ajouter `%` et spécificateur]
+    F -->|%%| K[Ajouter %]
+    F -->|autre| L[Ajouter % et spécificateur]
     G --> M[Passer au caractère suivant]
     H --> M
     I --> M
