@@ -11,8 +11,9 @@ int print_int_or_dec(va_list args)
 {
 	int number = va_arg(args, int);
 	unsigned int num;
-	int count = 0;
+	int count = 1;
 	int div = 1;
+
 	if (number < 0)
 	{
 		_putchar('-');
@@ -32,11 +33,12 @@ int print_int_or_dec(va_list args)
 	while (div > 0)
 	{
 		int digit = (num / div) % 10;
+
 		_putchar(digit + '0');
 		num %= div;
 		div /= 10;
 		count++;
 	}
-	return count;
+	return (count);
 }
 
