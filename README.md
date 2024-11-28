@@ -1,59 +1,22 @@
-+------------------+
-| Démarrer printf  |
-+------------------+
-         |
-         v
-+------------------+
-| Parcourir format |
-+------------------+
-         |
-         v
-+---------------------------+
-| Est-ce un caractère `%` ? |
-+---------------------------+
-        /        \
-       Oui       Non
-       /           \
-      v            v
-+-------------------------+      +---------------------------+
-| Identifier spécificateur|      | Ajouter caractère au      |
-| et récupérer argument   |      | résultat final            |
-+-------------------------+      +---------------------------+
-       |
-       v
-+-----------------------------+
-| Spécificateur de format ?   |
-+-----------------------------+
-       |                |               |             |             |
-       v                v               v             v             v
-+-------+        +------+       +------+      +------+      +------+
-|  %d   |        |  %s   |       |  %c  |      |  %i  |      |  %% |
-+-------+        +------+       +------+      +------+      +------+
-  |                 |              |             |             |
-  v                 v              v             v             v
-+------------------------------+ +------------------------------+
-| Convertir entier en chaîne   | | Ajouter la chaîne            |
-+------------------------------+ +------------------------------+
-        |                              |
-        v                              v
-+------------------------------+ +------------------------------+
-| Ajouter l'entier converti    | | Ajouter le caractère         |
-+------------------------------+ +------------------------------+
-                                | Ajouter le flottant |
-                                +----------------------+
-                                | Ajouter `%`        |
-                                +----------------------+
-
-        v
-+---------------------------+
-| Est-ce la fin du format ? |
-+---------------------------+
-        /        \
-       Oui       Non
-        /          \
-       v            v
-+-------------------------+
-| Afficher résultat final |
-+-------------------------+
-
->>>>>>> bryan
+graph TD
+    A[Démarrer printf] --> B[Parcourir format]
+    B --> C{Est-ce un caractère `%` ?}
+    C -->|Oui| D[Identifier spécificateur et récupérer argument]
+    C -->|Non| E[Ajouter caractère au résultat final]
+    D --> F{Spécificateur de format ?}
+    F -->|%d| G[Convertir entier en chaîne et ajouter]
+    F -->|%s| H[Ajouter chaîne]
+    F -->|%c| I[Ajouter caractère]
+    F -->|%f| J[Convertir flottant en chaîne et ajouter]
+    F -->|%%| K[Ajouter `%`]
+    F -->|autre| L[Ajouter `%` et spécificateur]
+    G --> M[Passer au caractère suivant]
+    H --> M
+    I --> M
+    J --> M
+    K --> M
+    L --> M
+    E --> M
+    M --> N{Est-ce la fin du format ?}
+    N -->|Oui| O[Afficher résultat final]
+    N -->|Non| B
