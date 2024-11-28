@@ -41,4 +41,3 @@ int print_int_or_dec(va_list args)
 	}
 	return (count);
 }
-
