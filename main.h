@@ -21,4 +21,6 @@ typedef struct specifier
 	int (*function)(va_list argument);
 
 } spec;
+
+
 #endif
