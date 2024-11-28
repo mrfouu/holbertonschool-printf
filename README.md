@@ -1,4 +1,4 @@
-```
+```mermaid
 graph TD
     A[Démarrer printf] --> B[Parcourir format]
     B --> C{Est-ce un caractère `%` ?}
