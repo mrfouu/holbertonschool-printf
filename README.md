@@ -1,3 +1,7 @@
+<div align="center">
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*is7_2D8TSgViW5dntlGkQw.png">
+</div>
+
 ```mermaid
 graph TD
     A[Démarrer printf] --> B[Parcourir format]
