@@ -37,6 +37,10 @@ int main(void)
     printf("ecrit nous %@ dans la liste\n");
     _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
     printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+    _printf("%");
+    printf("%");
+
+
     /* Vérification de la longueur totale des caractères imprimés */
     len = _printf("Check length: [%d]\n", 12345);
     len2 = printf("Check length: [%d]\n", 12345);
