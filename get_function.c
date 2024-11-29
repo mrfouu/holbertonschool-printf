@@ -22,7 +22,7 @@ int (*get_function(const char *format))(va_list)
 
 	for (i = 0; check[i].letter; i++)
 	{
-		if (*check[i].letter == *format)
+		if (*(check[i].letter) == *format)
 			return (check[i].function);
 	}
 	return (NULL);

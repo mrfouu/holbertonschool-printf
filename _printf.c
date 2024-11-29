@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int counter = 0;
+	unsigned int counter = -1;
 	va_list args;
 	unsigned int i = 0;
 	int (*function)(va_list);
@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
-			if (format[i + 1] == 'c' || format[i + 1] == 'd' || 
+		{
+			if (format[i + 1] == 'c' || format[i + 1] == 'd' ||
 			format[i + 1] == '%' || format[i + 1] == 'i' ||
 			format[i + 1] == 's')
 			{
@@ -36,12 +37,13 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				counter++;
 			}
+		}
 		else
 		{
 			_putchar(format[i]);
 			counter++;
 		}
-		i++;	
+		i++;
 	}
 	va_end(args);
 	return (counter);
