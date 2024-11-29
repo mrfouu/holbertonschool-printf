@@ -15,6 +15,7 @@ graph TD
     F -->|%f| J[Convertir flottant en chaîne et ajouter]
     F -->|%%| K[Ajouter %]
     F -->|autre| L[Ajouter % et spécificateur]
+    F -->|aucun soécificateur| M[aucun spécificateur trouver]
     G --> M[Passer au caractère suivant]
     H --> M
     I --> M
