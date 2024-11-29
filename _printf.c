@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int counter = 0;
+	unsigned int counter = -1;
 	va_list args;
 	unsigned int i = 0;
 	int (*function)(va_list);
