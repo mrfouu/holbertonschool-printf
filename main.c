@@ -26,5 +26,33 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+    _printf("Zero:[%d]\n", 0);
+    _printf("INT_MIN:[%d]\n", INT_MIN);
+    printf("INT_MIN:[%d]\n", INT_MIN);
+    _printf("INT_MAX:[%d]\n", INT_MAX);
+    printf("INT_MAX;[%d]\n", INT_MAX);
+    _printf("Multiline test:\nFirst line\nSecond line\n");
+    printf("Multiline test:\nFirst line\nSecond line\n");
+    /* Vérification de la longueur totale des caractères imprimés */
+    len = _printf("Check length: [%d]\n", 12345);
+    len2 = printf("Check length: [%d]\n", 12345);
+    	if (len == len2)
+		printf("Success: Lengths match! _printf: %d, printf: %d\n", len, len2);
+    	else
+		printf("Error: Lengths differ! _printf: %d, printf: %d\n", len, len2);
+
+    len = _printf("Negative number: [%d]\n", -54321);			    
+    len2 = printf("Negative number: [%d]\n", -54321);
+	if (len == len2)
+		printf("Success: Lengths match! _printf: %d, printf: %d\n", len, len2);
+	else
+		printf("Error: Lengths differ! _printf: %d, printf: %d\n", len, len2);
+
+    len = _printf("Zero: [%d]\n", 0);
+    len2 = printf("Zero: [%d]\n", 0);
+	if (len == len2)
+		printf("Success: Lengths match! _printf: %d, printf: %d\n", len, len2);
+	else
+		printf("Error: Lengths differ! _printf: %d, printf: %d\n", len, len2);
     return (0);
 }
