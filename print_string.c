@@ -16,7 +16,7 @@ int print_string(va_list list)
 	string = va_arg(list, char*);
 
 	if (string == NULL)/* renvoie 0 si le string et vide*/
-		return (0);
+		string = "(null)";
 
 	while (string[i] != '\0')/*tourne tant que pas arriver au bit nul */
 	{

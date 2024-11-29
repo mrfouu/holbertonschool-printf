@@ -33,6 +33,10 @@ int main(void)
     printf("INT_MAX;[%d]\n", INT_MAX);
     _printf("Multiline test:\nFirst line\nSecond line\n");
     printf("Multiline test:\nFirst line\nSecond line\n");
+    _printf("ecrit nous %@ dans la liste\n");
+    printf("ecrit nous %@ dans la liste\n");
+    _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+    printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
     /* Vérification de la longueur totale des caractères imprimés */
     len = _printf("Check length: [%d]\n", 12345);
     len2 = printf("Check length: [%d]\n", 12345);
