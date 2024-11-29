@@ -86,4 +86,5 @@ graph TD
 
 ### Authors
 Bryan Weinegaessel [](https://github.com/mrfouu)
+
 Hugo Bailly [](https://github.com/hugo-b-fx)
