@@ -11,7 +11,7 @@ int print_int_or_dec(va_list args)
 {
 	int number = va_arg(args, int);
 	unsigned int num;
-	int count = 1;
+	int count = 0;
 	int div = 1;
 
 	if (number < 0)
