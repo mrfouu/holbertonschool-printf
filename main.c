@@ -62,5 +62,10 @@ int main(void)
 		printf("Success: Lengths match! _printf: %d, printf: %d\n", len, len2);
 	else
 		printf("Error: Lengths differ! _printf: %d, printf: %d\n", len, len2);
+
+	_printf("Binary of 5: [%b]\n", 5);
+	_printf("Binary of 0: [%b]\n", 0);
+	_printf("Binary of 1023: [%b]\n", 1023);
+
     return (0);
 }

@@ -9,6 +9,7 @@ int print_percent(va_list list);
 int print_int_or_dec(va_list args);
 int (*get_function(const char *format))(va_list list);
 int _putchar(char c);
+int convert_int_binary(va_list list);
 /**
  * struct specifier - structure comparée et appelle la function
  * @letter: compare letter a format
