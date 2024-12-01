@@ -1,0 +1,41 @@
+.TP
+.B %c
+Character
+.TP
+.B %s
+String
+.TP
+.B %d
+or
+.B %i
+Signed decimal integer
+.TP
+.B %%
+Literal
+.B %
+character
+
+.SH RETURN VALUE
+The
+.B _printf
+function returns the number of characters printed (excluding the null byte used to end output to strings). If an output error occurs, a negative value is returned.
+
+.SH EXAMPLES
+.nf
+_printf("Hello, World!\n");       // Outputs: Hello, World!
+_printf("Number: %d\n", 42);      // Outputs: Number: 42
+.fi
+
+.SH SEE ALSO
+.B printf(3)
+
+.SH AUTHORS
+.nf
+Bryan Weinegaessel
+Hugo Bailly
+.fi
+
+.SH DATE
+.nf
+23/11/2024
+.fi
